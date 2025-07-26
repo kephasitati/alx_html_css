@@ -24,3 +24,28 @@ aside {
   flex: 1; /* occupies one part */
   overflow-y: auto; /* enable vertical scroll */
 }
+.logo {
+    font-size: 2rem;       /* Make the logo bigger */
+    font-weight: bold;
+    margin-right: 15px;    /* Space after logo */
+}
+nav ul {
+    list-style: none;
+    display: flex;         /* Align items horizontally */
+    align-items: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;           /* Change as per your theme */
+    font-size: 1rem;
+}
+
+nav ul li a:hover {
+    color: #ffcc00;        /* Hover effect */
+}
