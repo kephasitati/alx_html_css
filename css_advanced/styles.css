@@ -1,152 +1,18 @@
-/* Importing webfonts */
-/* (If you're learning CSS, you should disregard that) */
-
-@import url(https://fonts.googleapis.com/css?family=Yeseva+One);
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700italic,400italic);
-
-
-/* CSS reset rules */
-
-html, body {
-	height: 100%;
-	min-height: 100%;
-}
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, img, ins, kbd, q, s, samp,
-small, strike, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+/* Global Styles */
 body {
-	line-height: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Josefin Sans', serif;
+    color: rgba(0, 0, 0, 0.8);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
 }
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-
-/* Fonts and colors */
-
-body {
-	font-family: 'Josefin Sans', serif;
-	color: rgba(0, 0, 0, 0.8);
-}
-h1, h2, h3, h4, h5, h6, header {
-	font-family: 'Yeseva One', sans-serif;
-}
-section article {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-
-}
-header {
-	border-bottom: 1px solid rgb(221,221,221);
-	transition: border-bottom-color 1s ease;
-}
-header a {
-	color: rgba(0, 0, 0, 0.8);
-}
-aside {
-	background: #FAFAFA;
-}
-aside p {
-	border: 1px solid #bbb;
-	background: #ddd;
-	color: black;
-}
-footer a {
-	color: rgba(0, 0, 0, 0.8);
-}
-a {
-	color: #F80002;
-}
-
-
-/* Positioning and margins */
-
-@media (min-width: 1100px) {
-	body {
-		width: 1100px;
-		margin: 0 auto;
-	}
-}
-
-article {
-	padding: 50px 15px;
-}
-article > *:first-child {
-	margin-top: 0;
-}
-aside {
-	padding: 50px 15px;
-}
-header .right {
-	float: right;
-	margin: 0 10px 15px;
-}
-
-
-/* Header */
-header {
-	padding: 20px 0;
-	height: 80px;
-}
-header ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
-}
-header li {
-	display: inline;
-	vertical-align:middle;
-}
-header li:first-child {
-	margin: 0;
-}
-header li a {
-	margin: 0 10px;
-}
-header li.logo {
-	font-size: 36px;
-}
-header a {
-	text-decoration: none;
-}
-
-/* Button */
+/* Button Styles */
 button {
-	display: flex;
-	align-items: center;
-	background: #830ae6;
+	background-color: #007BFF;		
 	color: white;
 	border: none;
 	padding: 10px 20px;
@@ -155,66 +21,97 @@ button {
 	transition: background-color 0.3s ease;
 }
 
-/* Aside */
+/* Main Layout */
+main {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+	justify-content: center;
+}
+/* Article - Main Content */
+main article {
+    margin-right: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow-y: auto;
+    max-height: 80vh;
+}
 
-aside p {
+/* Hero Section */
+.hero h1 {
+	font-size: 48px;	
+	margin: 0;
+}
+ .hero {
+	flex: 2;
+	background-color: #f0f0f0;
+	padding: 20px;
 	border-radius: 10px;
-	padding: 20px 20px;
+	margin-right: 20px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
 }
 
-
-/* Footer */
-
-footer {
-	background: #2c2929;
-	padding: 20px 0;
-}
-footer p {
-	margin: auto;
-	height: 80px;
+/* Aside - Sidebar */
+aside {
+    flex: 1;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: auto;
+    max-height: 80vh;
 }
 
-
-/* Text styles and margins */
-
-p {
-	margin-bottom: 15px;
-}
-h1 {
-	font-size: 36px;
-	margin: 40px 0 20px;
-}
-h2 {
-	font-size: 32px;
-	margin: 30px 0 15px;
-}
-h3 {
-	font-size: 28px;
-	margin: 25px 0 10px;
-}
-h4 {
-	font-size: 20px;
-	font-weight: bold;
-	margin: 20px 0 10px;
-}
-h5 {
-	font-size: 18px;
-	font-weight: bold;
-	margin: 15px 0 10px;
-}
-h6 {
-	font-weight: bold;
-	margin: 5px 0;
+/* Header Styles */
+header {
+    background-image: url('./images/Object.png');
+	background-size: cover;
+	background-position: center;
+    color: rgb(21, 20, 20);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-@media (max-width: 800px) {
-  body.works_on_smartphone {
-  	display: block;
-  }
-  body.works_on_smartphone main {
-  	display: block;
-  }
-  header .right {
-  	float: none;
-  }
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+header nav ul {
+	display: flex;
+	justify-content: right;
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive Touch (Optional) */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    main article {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
 }
