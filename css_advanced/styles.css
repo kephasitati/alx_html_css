@@ -62,7 +62,11 @@ body {
 h1, h2, h3, h4, h5, h6, header {
 	font-family: 'Yeseva One', sans-serif;
 }
-article {
+section article {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
 }
 header {
 	border-bottom: 1px solid rgb(221,221,221);
@@ -138,6 +142,18 @@ header a {
 	text-decoration: none;
 }
 
+/* Button */
+button {
+	display: flex;
+	align-items: center;
+	background: #830ae6;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
 
 /* Aside */
 
@@ -150,7 +166,11 @@ aside p {
 /* Footer */
 
 footer {
-	padding: 5px 15px;
+	background: #2c2929;
+	padding: 20px 0;
+}
+footer p {
+	margin: auto;
 	height: 80px;
 }
 
