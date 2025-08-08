@@ -41,80 +41,75 @@ header.hero {
   padding-top: 0; /* Remove default vertical spacing */
 }
 .hero {
-  background-image: url("images/headphones_hero_1.jpg");
-  background-size: contain;
+  background-image: url("images/headphones_hero_2.jpg");
+  background-size: fill;
   background-position: center;
   padding: 60px 20px;
   text-align: center;
 }
 
-/* Navigation */
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    max-width: var(--max-width);
-    margin: 0 auto;
-    z-index: 10;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: var(--text-color);
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-.nav-links a:hover,
-.nav-links a:active {
-  color: var(--primary-color);
-}
-
 /* Hero Content */
 .hero-content h1 {
     font-family: var(--display-font);
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   padding-top: 80px;
   margin-top: 90px;
   margin-bottom: 20px;
-}
-
-.hero-content h3 {
-  font-size: 1.2rem;
-  margin-bottom: 30px;
-  font-weight: normal;
-}
-
-.hero-content button {
-  background-color: var(--primary-color);
-  color: var(--text-color);
-  padding: 12px 25px;
-  border: none;
-  font-size: 1rem;
-  cursor: pointer;
-  border-radius: 999px;
-  transition: opacity 0.3s ease;
-}
-
-.hero-content button:hover,
-.hero-content button:active {
-  opacity: 0.9;
 }
 
 /* Hero Paragraph */
 .hero-paragraph {
   margin-top: 40px;
   font-size: 0.95rem;
-  line-height: 1.6;
+  line-height: 1.5;
 }
 
+/* Pentagons */
+.pentagons-container {
+  display: flex;
+  justify-content: center; /* Center all pentagons */
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 50px; /* Space between pentagons */
+  margin-top: 40px;
+}
+
+.pentagon {
+  position: relative; /* Needed for positioning text inside */
+  width: 150px; /* Adjust size */
+  height: 150px;
+}
+
+.pentagon img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pentagon span {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+  font-family: var(--primary-font);
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  pointer-events: none; /* Text won't interfere with clicking */
+}
+
+.pentagon span:first-of-type {
+  ptop: 40%;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.pentagon .pentagon-text {
+  top: 70%;  /* positioned just below +2% */
+  font-size: 0.5rem;
+  font-weight: normal;
+}
 /* Responsive Styles */
 @media (max-width: 480px) {
   .nav {
@@ -137,5 +132,21 @@ header.hero {
 
   .hero-paragraph p {
     font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pentagons-container {
+    flex-wrap: wrap; /* Stack on small screens */
+    gap: 15px;
+  }
+
+  .pentagon {
+    width: 80px;
+    height: 80px;
+  }
+
+  .pentagon span {
+    font-size: 1rem;
   }
 }
