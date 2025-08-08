@@ -138,16 +138,22 @@ header.hero {
 
 @media (max-width: 480px) {
   .pentagons-container {
-    flex-wrap: wrap; /* Stack on small screens */
-    gap: 15px;
+    flex-direction: column; /* Stack vertically */
+    align-items: center; /* Center them horizontally */
+    gap: 15px; /* Smaller space between stacked pentagons */
   }
 
   .pentagon {
-    width: 80px;
-    height: 80px;
+    width: 120px;  /* Bigger on mobile if you want */
+    height: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .pentagon span {
+    font-size: 1.2rem; /* scale down main number */
   }
 
-  .pentagon span {
-    font-size: 1rem;
+  .pentagon .pentagon-text {
+    font-size: 0.6rem; /* scale down sub text */
   }
 }
