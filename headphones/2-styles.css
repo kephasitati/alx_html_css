@@ -62,6 +62,7 @@ header.hero {
   margin-top: 40px;
   font-size: 0.95rem;
   line-height: 1.5;
+  padding-bottom: 40px;
 }
 
 /* Pentagons */
@@ -70,7 +71,7 @@ header.hero {
   justify-content: center; /* Center all pentagons */
   align-items: center;
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  gap: 50px; /* Space between pentagons */
+  gap: 70px; /* Space between pentagons */
   margin-top: 40px;
 }
 

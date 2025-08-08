@@ -1,0 +1,106 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonts */
+@font-face {
+  font-family: 'Spin-Cycle-OT';
+  src: url('fonts/Spin-Cycle-OT.ttf') format('truetype');
+}
+
+:root {
+  --primary-font: 'Source Sans Pro', sans-serif;
+  --display-font: 'Spin-Cycle-OT', cursive;
+  --primary-color: #FF6565;
+  --background-dark: #1d1d1d;
+  --text-color: #0a0a0a;
+  --max-width: 1200px;
+}
+/* Body & Container */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--primary-font);
+  background-color: black;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+  background-color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  padding: 60px 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.hero-content h1 {
+  font-family: var(--display-font);
+  font-size: 1.5rem; /* match other h1 size */
+  font-weight: bold; /* match your style */
+  margin-bottom: 20px; /* space before Name field */
+  color: var(--text-color);
+}
+
+/* Contact Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
+  width: 100%;
+  max-width: none; /* full width */
+  margin: 0 auto;
+  font-family: var(--primary-font, 'Source Sans Pro', sans-serif);
+}
+
+.contact-form label {
+  font-weight: 600;
+  text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000; /* black underline */
+  padding: auto 0;
+  color: var(--text-color, #0a0a0a);
+  font-size: 1rem;
+  outline: none;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-bottom-color: var(--primary-color, #FF6565); /* color on focus */
+}
+
+.contact-form button {
+  background-color: var(--primary-color, #FF6565);
+  color: #fff;
+  margin-top: 30px;
+  padding: 12px 25px;
+  border: none;
+  font-size: 0.5rem;
+  cursor: pointer;
+  border-radius: 999px;
+  transition: opacity 0.3s ease;
+  align-self: center; /* center button */
+}
+
+.contact-form button:hover {
+  opacity: 1.9;
+}

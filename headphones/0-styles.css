@@ -42,7 +42,7 @@ header.hero {
 }
 .hero {
   background-image: url("images/headphones_hero_1.jpg");
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   padding: 60px 20px;
   text-align: center;
@@ -53,11 +53,24 @@ header.hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
     max-width: var(--max-width);
     margin: 0 auto;
-    z-index: 10;
+    z-index: 20;
 }
+
+/* Logo */
+.logo {
+  height: 30px;              /* keeps it proportional */
+  width: auto;               /* prevents stretching */
+  display: block;            /* removes inline spacing issues */
+}
+
+@media (max-width: 480px) {
+  .logo {
+    height: 40px;            /* slightly smaller on small screens */
+  }
+}
+
 
 .nav-links {
   list-style: none;
@@ -69,6 +82,7 @@ header.hero {
   text-decoration: none;
   color: var(--text-color);
   font-weight: bold;
+  font-size: small;
   transition: color 0.3s ease;
 }
 
@@ -80,10 +94,9 @@ header.hero {
 /* Hero Content */
 .hero-content h1 {
     font-family: var(--display-font);
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   padding-top: 80px;
   margin-top: 90px;
-  margin-bottom: 20px;
 }
 
 .hero-content h3 {
@@ -97,7 +110,7 @@ header.hero {
   color: var(--text-color);
   padding: 12px 25px;
   border: none;
-  font-size: 1rem;
+  font-size: 0.5rem;
   cursor: pointer;
   border-radius: 999px;
   transition: opacity 0.3s ease;
