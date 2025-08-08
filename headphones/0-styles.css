@@ -36,9 +36,13 @@ body {
 }
 
 /* Header Section */
+header.hero {
+  position: relative;
+  padding-top: 0; /* Remove default vertical spacing */
+}
 .hero {
   background-image: url("images/headphones_hero_1.jpg");
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   padding: 60px 20px;
   text-align: center;
@@ -46,10 +50,13 @@ body {
 
 /* Navigation */
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    z-index: 10;
 }
 
 .nav-links {
@@ -74,6 +81,8 @@ body {
 .hero-content h1 {
     font-family: var(--display-font);
   font-size: 2.5rem;
+  padding-top: 80px;
+  margin-top: 90px;
   margin-bottom: 20px;
 }
 
