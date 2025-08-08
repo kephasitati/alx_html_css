@@ -1,0 +1,80 @@
+@font-face {
+  font-family: 'holberton_school-icon';
+  src: url('icons/fonts/holberton_school-icon.eot');
+  src: url('icons/fonts/holberton_school-icon.eot?#iefix') format('embedded-opentype'),
+       url('icons/fonts/holberton_school-icon.woff2') format('woff2'),
+       url('icons/fonts/holberton_school-icon.woff') format('woff'),
+       url('icons/fonts/holberton_school-icon.ttf') format('truetype'),
+       url('icons/fonts/holberton_school-icon.svg#holberton_school-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+
+/* Footer styling */
+.site-footer {
+  background-color: #071629;
+  color: white;
+  padding: 20px 40px;
+  font-family: var(--primary-font, Arial, sans-serif);
+  width: 100%;
+}
+
+/* Top section - logo on the left, icons on the right */
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* Logo styling */
+.footer-logo img {
+  max-height: 40px;
+}
+
+/* Social media icons - Holberton icons */
+.footer-social a {
+  font-family: 'holberton_school-icon'; /* Ensure Holberton font is used */
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  speak: none;
+  line-height: 1;
+  color: white;
+  font-size: 24px;
+  margin-left: 15px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer-social a:hover {
+  color: var(--primary-color, #ff4b5c); /* hover effect */
+}
+
+/* Bottom text */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.footer-bottom p {
+  color: grey; /* grey text */
+  font-size: 14px;
+  margin: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .footer-top {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .footer-social a {
+    font-size: 20px;
+    margin: 0 10px;
+  }
+}
