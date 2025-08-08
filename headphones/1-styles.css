@@ -1,86 +1,64 @@
-/* Reset CSS */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* CSS Variables */
 @font-face {
-  font-family: 'Spin-Cycle-OT';
-  src: url('fonts/Spin-Cycle-OT.ttf') format('truetype');
+  font-family: 'holberton_school-icon';
+  src: url('icons/fonts/holberton_school-icon.eot');
+  src: url('icons/fonts/holberton_school-icon.eot?#iefix') format('embedded-opentype'),
+       url('icons/fonts/holberton_school-icon.woff2') format('woff2'),
+       url('icons/fonts/holberton_school-icon.woff') format('woff'),
+       url('icons/fonts/holberton_school-icon.ttf') format('truetype'),
+       url('icons/fonts/holberton_school-icon.svg#holberton_school-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
-:root {
-    --primary-font: 'Source Sans Pro', sans-serif;
-  --display-font: 'Spin-Cycle-OT', cursive;
-  --primary-color: #FF6565;
-  --background-dark: #1d1d1d;
-  --text-color: #0a0a0a;
-  --max-width: 1000px;
+[class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+  font-family: 'holberton_school-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Body & Container */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--primary-font);
-  background-color: black;
-  color: var(--text-color);
-}
+/* Replace these codes with your actual IcoMoon export values */
+.holberton_school-icon-ic_sound:before { content: "\e90e"; }
+.holberton_school-icon-ic_music:before { content: "\e910"; }
+.holberton_school-icon-ic_video:before { content: "\e90d"; }
+.holberton_school-icon-ic_headphones:before { content: "\e909"; }
 
-.container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* What we do Section */
 .hero {
-  background-color: #ffffff;
-  background-size: cover;
-  background-position: center;
-  padding: 60px 20px;
   text-align: center;
+  padding: 50px 20px;
 }
-/* Hero Content */
-.hero-content h1 {
-    font-family: var(--display-font);
-  font-size: 2.5rem;
+
+.hero h1 {
+  font-size: 2rem;
   margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
-/* Hero Paragraph */
 .hero-paragraph {
-  margin-top: 40px;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: black;
+  margin-bottom: 60px;
+  font-size: 1.1rem;
 }
 
-/* Responsive Styles */
-  .hero-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-paragraph p {
-    font-size: 0.85rem;
-  }
-  
-  @media (max-width: 480px) {
-  .icons {
-    flex-direction: column;
-    align-items: center;
-  }
-}
-
-/* Icons */
 .icons {
   display: flex;
-  flex-wrap: wrap; /* Allows them to wrap on small screens */
-  flex-direction: row; /* Ensures they are in a row */
-  padding-top: 40px;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 40px;
-  margin-top: 40px
+}
+
+.icon-item {
+  max-width: 300px;
+}
+
+.icon-item i {
+  font-size: 100px;
+  color: #ff5252;
+  display: block;
+  margin-bottom: 15px;
 }
