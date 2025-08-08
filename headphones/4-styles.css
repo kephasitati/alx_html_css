@@ -1,3 +1,4 @@
+/* Import the icon font from IcoMoon export */
 @font-face {
   font-family: 'holberton_school-icon';
   src: url('icons/fonts/holberton_school-icon.eot');
@@ -11,6 +12,23 @@
   font-display: block;
 }
 
+/* Icon base styling from IcoMoon */
+[class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
+  font-family: 'holberton_school-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Individual icon content codes from your export */
+.holberton_school-icon-ic_facebook:before { content: "\e908"; }
+.holberton_school-icon-ic_twitter:before { content: "\e90f"; }
+.holberton_school-icon-ic_instagram:before { content: "\e90a"; }
 
 /* Footer styling */
 .site-footer {
@@ -18,10 +36,9 @@
   color: white;
   padding: 20px 40px;
   font-family: var(--primary-font, Arial, sans-serif);
-  width: 100%;
 }
 
-/* Top section - logo on the left, icons on the right */
+/* Top section */
 .footer-top {
   display: flex;
   justify-content: space-between;
@@ -34,36 +51,29 @@
   max-height: 40px;
 }
 
-/* Social media icons - Holberton icons */
+/* Social media icons */
 .footer-social a {
-  font-family: 'holberton_school-icon'; /* Ensure Holberton font is used */
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  speak: none;
-  line-height: 1;
   color: white;
   font-size: 24px;
   margin-left: 15px;
   text-decoration: none;
-  display: inline-block;
 }
 
 .footer-social a:hover {
-  color: var(--primary-color, #ff4b5c); /* hover effect */
+  color: var(--primary-color, #ff5252);
 }
 
 /* Bottom text */
 .footer-bottom {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 15px;
 }
 
 .footer-bottom p {
-  color: grey; /* grey text */
+  color: grey;
   font-size: 14px;
-  margin: 40px;
+  margin-top: 60px;
+  margin-bottom: 40px;
 }
 
 /* Responsive adjustments */
