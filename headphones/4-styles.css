@@ -34,7 +34,7 @@
 .site-footer {
   background-color: #071629;
   color: white;
-  padding: 20px 40px;
+  padding: 40px 100px;
   font-family: var(--primary-font, Arial, sans-serif);
 }
 
@@ -44,6 +44,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  margin-top: 40px;
 }
 
 /* Logo styling */
@@ -55,8 +56,9 @@
 .footer-social a {
   color: white;
   font-size: 24px;
-  margin-left: 15px;
+  margin-left: 5px;
   text-decoration: none;
+
 }
 
 .footer-social a:hover {
