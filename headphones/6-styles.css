@@ -1,0 +1,159 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS Variables */
+@font-face {
+  font-family: 'Spin-Cycle-OT';
+  src: url('fonts/Spin-Cycle-OT.ttf') format('truetype');
+}
+
+:root {
+    --primary-font: 'Source Sans Pro', sans-serif;
+  --display-font: 'Spin-Cycle-OT', cursive;
+  --primary-color: #FF6565;
+  --background-dark: #1d1d1d;
+  --text-color: #ffffff;
+  --max-width: 1000px;
+}
+
+/* Body & Container */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--primary-font);
+  background-color: black;
+  color: var(--text-color);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Section */
+header.hero {
+  position: relative;
+  padding-top: 0; /* Remove default vertical spacing */
+}
+.hero {
+  background-image: url("images/headphones_hero_2.jpg");
+  background-size: fill;
+  background-position: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* Hero Content */
+.hero-content h1 {
+    font-family: var(--display-font);
+  font-size: 1.5rem;
+  padding-top: 80px;
+  margin-top: 90px;
+  margin-bottom: 20px;
+}
+
+/* Hero Paragraph */
+.hero-paragraph {
+  margin-top: 40px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  padding-bottom: 40px;
+}
+
+/* Pentagons */
+.pentagons-container {
+  display: flex;
+  justify-content: center; /* Center all pentagons */
+  align-items: center;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 70px; /* Space between pentagons */
+  margin-top: 40px;
+}
+
+.pentagon {
+  position: relative; /* Needed for positioning text inside */
+  width: 150px; /* Adjust size */
+  height: 150px;
+}
+
+.pentagon img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.pentagon span {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%);
+  font-family: var(--primary-font);
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  pointer-events: none; /* Text won't interfere with clicking */
+}
+
+.pentagon span:first-of-type {
+  ptop: 40%;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.pentagon .pentagon-text {
+  top: 70%;  /* positioned just below +2% */
+  font-size: 0.5rem;
+  font-weight: normal;
+}
+/* Responsive Styles */
+@media (max-width: 480px) {
+  .nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content h3 {
+    font-size: 1rem;
+  }
+
+  .hero-paragraph p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pentagons-container {
+    flex-direction: column; /* Stack vertically */
+    align-items: center; /* Center them horizontally */
+    gap: 15px; /* Smaller space between stacked pentagons */
+  }
+
+  .pentagon {
+    width: 120px;  /* Bigger on mobile if you want */
+    height: 120px;
+  }
+}
+@media (max-width: 480px) {
+  .pentagon span {
+    font-size: 1.2rem; /* scale down main number */
+  }
+
+  .pentagon .pentagon-text {
+    font-size: 0.6rem; /* scale down sub text */
+  }
+}
