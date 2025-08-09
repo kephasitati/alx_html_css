@@ -65,95 +65,70 @@ header.hero {
   padding-bottom: 40px;
 }
 
-/* Pentagons */
-.pentagons-container {
+/* Container */
+.pentagon-section {
   display: flex;
-  justify-content: center; /* Center all pentagons */
+  gap: 24px;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  gap: 70px; /* Space between pentagons */
-  margin-top: 40px;
+  flex-wrap: wrap;
+  padding: 32px 12px;
 }
 
+/* Pentagon base */
 .pentagon {
-  position: relative; /* Needed for positioning text inside */
-  width: 150px; /* Adjust size */
-  height: 150px;
+  --size: 140px;           /* default size, overridden inline if needed */
+  width: var(--size);
+  height: calc(var(--size) * 1.02); /* slightly taller to fit shape */
+  background: var(--bg, #666);
+  clip-path: polygon(
+    50% 0%,    /* top point */
+    100% 38%,  /* top-right */
+    82% 100%,  /* bottom-right */
+    18% 100%,  /* bottom-left */
+    0% 38%     /* top-left */
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform .18s ease, box-shadow .18s ease;
+  cursor: default;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
 }
 
-.pentagon img {
-  width: 100%;
-  height: auto;
-  display: block;
+/* hover (optional) */
+.pentagon:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,.18);
 }
 
-.pentagon span {
-  position: absolute;
-  top: 50%; /* Center vertically */
-  left: 50%; /* Center horizontally */
-  transform: translate(-50%, -50%);
-  font-family: var(--primary-font);
-  font-size: 2.2rem;
-  font-weight: bold;
-  color: white;
+/* Inner content centered */
+.pentagon-inner {
   text-align: center;
-  pointer-events: none; /* Text won't interfere with clicking */
+  color: white;
+  padding: 8px;
+  pointer-events: none; /* keeps shape non-interactive if desired */
 }
 
-.pentagon span:first-of-type {
-  ptop: 40%;
-  font-size: 2.5rem;
-  font-weight: bold;
+/* Big value */
+.pentagon-value {
+  font-size: calc(var(--size) * 0.26); /* scales with size */
+  font-weight: 700;
+  line-height: 1;
 }
 
-.pentagon .pentagon-text {
-  top: 70%;  /* positioned just below +2% */
-  font-size: 0.5rem;
-  font-weight: normal;
+/* small label under value */
+.pentagon-label {
+  font-size: calc(var(--size) * 0.095);
+  opacity: 0.95;
+  margin-top: 6px;
 }
-/* Responsive Styles */
+
+/* Responsive: smaller on narrow screens */
 @media (max-width: 480px) {
-  .nav {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .nav-links {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero-content h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-content h3 {
-    font-size: 1rem;
-  }
-
-  .hero-paragraph p {
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .pentagons-container {
-    flex-direction: column; /* Stack vertically */
-    align-items: center; /* Center them horizontally */
-    gap: 15px; /* Smaller space between stacked pentagons */
-  }
-
-  .pentagon {
-    width: 120px;  /* Bigger on mobile if you want */
-    height: 120px;
-  }
-}
-@media (max-width: 480px) {
-  .pentagon span {
-    font-size: 1.2rem; /* scale down main number */
-  }
-
-  .pentagon .pentagon-text {
-    font-size: 0.6rem; /* scale down sub text */
-  }
+  .pentagon { --size: 110px; }
+  .pentagon-section { gap: 14px; padding: 20px; }
+  .pentagon-value { font-size: calc(var(--size) * 0.28); }
+  .pentagon-label { font-size: calc(var(--size) * 0.095); }
 }
